@@ -17,7 +17,7 @@
         @php($shortUrl = session('short_url'))
         <section class="card result-card" aria-live="polite">
             <div class="result-header">
-                <span class="result-check" aria-hidden="true">✓</span>
+                <span class="result-check" aria-hidden="true"><x-icon name="check" :size="16" /></span>
                 <h2 class="result-title">Your short link is ready</h2>
             </div>
 
@@ -31,9 +31,13 @@
                     aria-label="Generated short URL"
                 >
                 <button type="button" class="btn btn-copy" data-copy-target="#short-url">
+                    <x-icon name="copy" :size="16" class="copy-icon-default" />
+                    <x-icon name="check" :size="16" class="copy-icon-done" />
                     <span class="copy-label">Copy</span>
                 </button>
-                <a href="{{ $shortUrl }}" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Open ↗</a>
+                <a href="{{ $shortUrl }}" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">
+                    Open <x-icon name="external" :size="15" />
+                </a>
             </div>
 
             <dl class="result-meta">
@@ -118,13 +122,15 @@
             </div>
 
             <div class="form-actions">
-                <button type="submit" class="btn btn-primary btn-lg">Shorten URL</button>
+                <button type="submit" class="btn btn-primary btn-lg">
+                    <x-icon name="scissors" :size="17" /> Shorten URL
+                </button>
             </div>
         </form>
     </section>
 
     <p class="storage-note">
-        <span aria-hidden="true">🗄️</span>
+        <x-icon name="database" :size="15" />
         CutURL stores links locally in a JSON file. No account, no cloud, no database.
     </p>
 @endsection

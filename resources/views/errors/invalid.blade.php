@@ -4,7 +4,7 @@
 
 @section('content')
     <section class="state-page card">
-        <p class="state-emoji" aria-hidden="true">⚠️</p>
+        <span class="state-icon state-icon-danger" aria-hidden="true"><x-icon name="alert" :size="30" /></span>
         <h1 class="state-title">This link can’t be opened</h1>
         <p class="state-text">
             The short link <code>/{{ $link['short_code'] ?? '' }}</code> points to a destination

@@ -63,6 +63,7 @@
         button.classList.add('is-copied');
         const label = button.querySelector('.copy-label');
         const original = label ? label.textContent : null;
+        if (label) { label.textContent = 'Copied'; }
         window.setTimeout(function () {
             button.classList.remove('is-copied');
             if (label && original !== null) { label.textContent = original; }

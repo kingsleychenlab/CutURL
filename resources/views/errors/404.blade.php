@@ -4,7 +4,7 @@
 
 @section('content')
     <section class="state-page card">
-        <p class="state-emoji" aria-hidden="true">🔍</p>
+        <span class="state-icon" aria-hidden="true"><x-icon name="compass" :size="30" /></span>
         <h1 class="state-title">404 — nothing here</h1>
         <p class="state-text">
             We couldn’t find a short link for that address. It may have been deleted,
