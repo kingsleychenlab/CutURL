@@ -1,29 +1,29 @@
-*.log
+# OS / editor
 .DS_Store
+Thumbs.db
+/.idea
+/.vscode
+/.zed
+/.nova
+/.phpactor.json
+
+# Environment & secrets
 .env
 .env.backup
 .env.production
-.phpactor.json
-.phpunit.result.cache
-/.codex
-/.cursor/
-/.idea
-/.nova
-/.phpunit.cache
-/.vscode
-/.zed
 /auth.json
-/node_modules
-/public/build
-/public/fonts-manifest.dev.json
-/public/hot
+
+# Dependencies & build artifacts
+/vendor
 /public/storage
+_ide_helper.php
+
+# Laravel runtime
+*.log
 /storage/*.key
 /storage/pail
+.phpunit.result.cache
+/.phpunit.cache
+
 # CutURL user data — auto-created at runtime, never committed.
 /storage/app/cuturl/links.json
-/vendor
-_ide_helper.php
-Homestead.json
-Homestead.yaml
-Thumbs.db
